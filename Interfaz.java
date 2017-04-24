@@ -4,9 +4,8 @@ import java.awt.*;
 /**
  * Created by Adri on 07/04/2017.
  */
-public class Interfaz {
+public class Interfaz extends JFrame{
 
-    private JFrame contenedor;
     private JPanel panelLogin;
     private JPanel panelBotones;
     private JPanel panelCampos;
@@ -21,7 +20,6 @@ public class Interfaz {
     private JTextField areaTexto;
 
     public Interfaz() {
-        contenedor = new JFrame();
         panelLogin = new JPanel();
         panelCampos = new JPanel();
         panelBotones = new JPanel();
@@ -35,8 +33,8 @@ public class Interfaz {
         boton = new JButton();
         areaTexto = new JTextField();
 
-        contenedor.setLayout(new BorderLayout());
-        contenedor.setSize(400, 400);
+        this.setLayout(new BorderLayout());
+        this.setSize(400, 300);
 
         jlblNombre.setText("Nome");
         jlblNombre.setSize(100, 50);
@@ -69,18 +67,18 @@ public class Interfaz {
         lista.setListData(elementos);
 
         boton.setText("Boton");
-        panelCampos.setSize(400, 200);
+        panelCampos.setSize(400, 100);
         panelCampos.setLayout(new GridLayout(1, 3));
         panelCampos.add(lista);
         panelCampos.add(boton);
         panelCampos.add(areaTexto);
 
-        contenedor.add(panelLogin, BorderLayout.NORTH);
-        contenedor.add(panelBotones, BorderLayout.CENTER);
-        contenedor.add(panelCampos, BorderLayout.SOUTH);
+        this.add(panelLogin, BorderLayout.NORTH);
+        this.add(panelBotones, BorderLayout.CENTER);
+        this.add(panelCampos, BorderLayout.SOUTH);
 
-        contenedor.setVisible(true);
-        
+        this.setVisible(true);
+
 
     }
 
